@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Nano World School</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Reuse main style -->
+    <link rel="stylesheet" href="./src/style.css">
+    <!-- Need to make sure style is imported correctly if doing manual link or rely on vite.config -->
+    <!-- Since it is vite, main.js imports style.css usually. But for multi-page, each page usually imports a JS entry point or the CSS directly. 
+         Looking at index.html, it imports /src/main.js which imports style.css. 
+         I should import /src/main.js logic here too. -->
+</head>
+
+<body>
+    <!-- 1. Top Announcement Strip -->
+    <div class="top-announcement">
+        <div class="container top-bar-content">
+            <div class="announcement-text">Admissions Open – Enquire Now</div>
+            <div class="top-bar-contact">
+                <span>📞 9704840888</span>
+                <div class="social-icons-small">
+                    <a href="https://tr.ee/gLG8Qhc9rh" target="_blank" aria-label="Social Media">🌐 Connect</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Transparent Sticky Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                NANO WORLD SCHOOL<span class="logo-dot">.</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#academic">Academic</a></li>
+                <li><a href="index.html#holistic">Holistic</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li class="mobile-only"><a href="index.html#enquiry" class="btn btn-primary small">Enquire Now</a></li>
+            </ul>
+            <div class="nav-cta desktop-only">
+                <a href="index.html#enquiry" class="btn btn-primary small">Enquire Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero-bg text-center">
+        <div class="container">
+            <h1 class="contact-page-title animate-up">Contact Us</h1>
+            <p class="section-desc animate-up delay-100" style="color: rgba(255,255,255,0.9); font-size: 1.3rem;">
+                Visit our campus to experience the Nano difference.
+            </p>
+        </div>
+    </section>
+
+    <!-- Two Column Contact Layout -->
+    <section class="section" style="padding-top: 4rem; padding-bottom: 6rem;">
+        <div class="container grid-2 contact-grid" style="align-items: start; gap: 4rem;">
+
+            <!-- Left Column: Contact Form -->
+            <div class="contact-form-column animate-left">
+                <div class="enquiry-card glass-effect"
+                    style="background: white; border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); padding: 2.5rem; border-radius: var(--radius-lg);">
+                    <h2 style="color: var(--color-primary); margin-bottom: 0.5rem;">Send Us a Message</h2>
+                    <p style="margin-bottom: 2rem; color: var(--color-text-light);">We'd love to hear from you.</p>
+
+                    <form id="contactForm" class="enquiry-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Parent's Name" required
+                                style="background: var(--color-light-bg); border-color: transparent;">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" required
+                                style="background: var(--color-light-bg); border-color: transparent;">
+                        </div>
+                        <div class="form-group">
+                            <select name="class" required
+                                style="background: var(--color-light-bg); border-color: transparent;">
+                                <option value="" disabled selected>Select Class Interested</option>
+                                <option value="Pre-Primary">Pre-Primary</option>
+                                <option value="Primary (1-5)">Primary (I - V)</option>
+                                <option value="Middle (6-8)">Middle (VI - VIII)</option>
+                                <option value="High (9-10)">High School (IX - X)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Message or Query" rows="4"
+                                style="background: var(--color-light-bg); border-color: transparent;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Submit Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Column: Info & Map -->
+            <div class="contact-info-column animate-right">
+
+                <!-- Contact Info Card -->
+                <div class="contact-info-card" style="margin-bottom: 2rem;">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--color-primary); font-size: 2rem;">Get in Touch</h2>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box">📍</div>
+                        <div class="info-content">
+                            <h4>Visit Us</h4>
+                            <p><strong>Nano World School</strong><br>
+                                Huda Layout Nallagandla,<br>
+                                Opposite Kidzee Preschool,<br>
+                                Serilingampalle (M), Hyderabad, Telangana 500019</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box">📞</div>
+                        <div class="info-content">
+                            <h4>Call Us</h4>
+                            <p style="font-size: 1.3rem; font-weight: bold; color: var(--color-secondary);">
+                                <a href="tel:9704840888">9704840888</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="map-wrapper-premium"
+                    style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); height: 300px;">
+                    <!-- Embedded Google Map -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.299692994975!2d78.2936993!3d17.4932313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbeb1859c362ab%3A0xe5082155bc814e5!2sNano%20World%20School!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer premium-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand C -->
+                <div class="footer-col brand-col">
+                    <h3>Nano World School</h3>
+                    <p class="footer-tagline">Think Deep. Speak Bold.</p>
+                    <div class="social-links-footer">
+                        <a href="https://www.instagram.com/nanoworldschool2026/" target="_blank" class="social-icon-btn"
+                            aria-label="Instagram">📷</a>
+                        <a href="https://www.facebook.com/profile.php?id=61588334097578" target="_blank"
+                            class="social-icon-btn" aria-label="Facebook">Mk</a>
+                        <a href="https://www.youtube.com/@nanoworldschool" target="_blank" class="social-icon-btn"
+                            aria-label="YouTube">▶️</a>
+                        <a href="https://www.linkedin.com/company/nanoworldschool/about/?viewAsMember=true"
+                            target="_blank" class="social-icon-btn" aria-label="LinkedIn">in</a>
+                        <a href="https://x.com/nanoworldschool" target="_blank" class="social-icon-btn"
+                            aria-label="Twitter">X</a>
+                    </div>
+                </div>
+                <!-- Links -->
+                <div class="footer-col links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#academic">Academics</a></li>
+                        <li><a href="index.html#enquiry">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div class="footer-col contact-col">
+                    <h3>Contact Us</h3>
+                    <p>Huda Layout Nallagandla,<br>Hyderabad, Telangana 500019</p>
+                    <p class="phone-large" style="margin-top:1rem;">📞 9704840888</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nano World School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
