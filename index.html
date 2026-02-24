@@ -5,610 +5,417 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nano World School - Think Deep. Speak Bold.</title>
-  <meta name="description"
-    content="Nano World School - Think Deep. Speak Bold. A premium, modern, and holistic educational institution." />
+  <meta name="description" content="Nano World School - A premium holistic educational institution." />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
 </head>
 
 <body>
 
-  <!-- 1. Top Announcement Strip -->
-  <div class="top-announcement">
-    <div class="container top-bar-content">
-      <div class="announcement-text">Admissions Open – Enquire Now</div>
-      <div class="top-bar-contact">
-        <span>📞 94 94 94 80 90</span>
-        <div class="social-icons-small">
-          <a href="https://tr.ee/gLG8Qhc9rh" target="_blank" aria-label="Social Media">🌐 Connect</a>
-        </div>
-      </div>
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="menu-close" id="menuClose">&times;</button>
+    <div class="menu-grid">
+      <a href="#academic" class="menu-card" onclick="closeMenu()">
+        <img src="/classroom.jpeg" alt="Academics">
+        <h3>Academics</h3>
+        <p>CBSE Curriculum & Integration</p>
+      </a>
+      <a href="#facilities" class="menu-card" onclick="closeMenu()">
+        <img src="/building_exterior.jpeg" alt="Facilities">
+        <h3>Facilities</h3>
+        <p>World-class Infrastructure</p>
+      </a>
+      <a href="#admissions" class="menu-card" onclick="closeMenu()">
+        <img src="/reception.jpeg" alt="Admissions">
+        <h3>Admissions</h3>
+        <p>Enroll for 2026-27</p>
+      </a>
+      <a href="#activities" class="menu-card" onclick="closeMenu()">
+        <img src="/seminar_hall.jpeg" alt="Activities">
+        <h3>Activities</h3>
+        <p>Holistic Development</p>
+      </a>
+      <a href="#gallery" class="menu-card" onclick="closeMenu()">
+        <img src="/interior_seating.jpeg" alt="Infrastructure">
+        <h3>Infrastructure</h3>
+        <p>Smart Classrooms & Labs</p>
+      </a>
+      <a href="contact.html" class="menu-card">
+        <img src="/branding_wall.jpeg" alt="Contact">
+        <h3>Contact Us</h3>
+        <p>Get in touch with us</p>
+      </a>
     </div>
   </div>
 
-  <!-- 2. Transparent Sticky Navbar -->
+  <!-- Navbar -->
   <nav class="navbar" id="navbar">
-    <div class="container navbar-container">
-      <a href="index.html" class="logo">
-        <img src="logo.jpeg" alt="Nano World School" class="logo-image" style="max-height: 50px;">
+    <div class="container navbar-inner">
+      <a href="/" class="logo">
+        <img src="/logo.jpeg" alt="Nano World School" style="border-radius: 8px;">
       </a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#academic">Academics</a></li>
+        <li><a href="#gallery">Campus</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="javascript:void(0)" id="menuBtn">Explore <span style="font-size:0.8rem">▼</span></a></li>
+        <li><a href="#admissions" class="btn btn-primary nav-cta">Enquire Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#academic">Academic</a></li>
-        <li><a href="#holistic">Holistic</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#gallery">Life @ Nano</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="mobile-only"><a href="#enquiry" class="btn btn-primary small">Enquire Now</a></li>
-      </ul>
-      <div class="nav-cta desktop-only">
-        <a href="#enquiry" class="btn btn-primary small">Enquire Now</a>
-      </div>
     </div>
   </nav>
 
-  <!-- 3. Large Hero Campus Section -->
-  <section class="hero" id="home">
-    <div class="hero-bg-anim"></div>
+  <!-- Hero Section -->
+  <header class="hero" id="home">
     <div class="hero-overlay"></div>
-    <div class="container hero-content text-center">
-      <h1 class="hero-title animate-up">NANO WORLD SCHOOL</h1>
-      <p class="hero-subtitle animate-up delay-100">Think Deep <span class="dot-white">•</span> Speak Bold</p>
-      <div class="hero-buttons animate-up delay-200">
-        <a href="#enquiry" class="btn btn-primary">Enquire Now</a>
-        <a href="#brochure" class="btn btn-secondary">Download Brochure</a>
+    <div class="container hero-content fade-up">
+      <h1 class="hero-title">Nano World School</h1>
+      <p class="hero-subtitle">Think Deep<span style="color: white; -webkit-text-fill-color: white;">.</span> Speak
+        Bold<span style="color: white; -webkit-text-fill-color: white;">.</span></p>
+      <p class="hero-text">Empowering students through experiential learning, holistic development, and world-class
+        educational infrastructure.</p>
+      <div class="hero-buttons">
+        <a href="#admissions" class="btn btn-primary">Enquire Now</a>
+        <a href="#brochure" class="btn btn-outline">Download Brochure</a>
       </div>
     </div>
-  </section>
-
-  <!-- 4. Admission Open Banner -->
-  <div class="admission-banner">
-    <div class="ribbon-text">
-      <span>📣 ADMISSIONS OPEN 2026–27 | Enroll Your Child Today!</span>
-      <a href="#enquiry" class="btn btn-secondary small"
-        style="border:1px solid white; padding: 0.3rem 1rem; margin-left:1rem; border-radius: 30px;">Apply Now</a>
+    <div class="scroll-indicator fade-up" style="animation-delay: 1s;">
+      <div class="mouse"></div>
+      Scroll
     </div>
-    <div class="ribbon-shine"></div>
-  </div>
+  </header>
 
-  <!-- 5. Trust / Highlights Strip -->
-  <div class="trust-strip">
-    <div class="container">
-      <div class="trust-grid">
-        <div class="trust-item"><span class="trust-icon">🏆</span> Academic Excellence</div>
-        <div class="trust-item"><span class="trust-icon">🌱</span> Holistic Growth</div>
-        <div class="trust-item"><span class="trust-icon">🤖</span> AI-Enabled Learning</div>
-        <div class="trust-item"><span class="trust-icon">🗣️</span> Speak-to-Lead</div>
-        <div class="trust-item"><span class="trust-icon">🛡️</span> Safe Campus</div>
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container grid-2">
+      <div class="about-image fade-up">
+        <img src="/reception.jpeg" alt="Nano World School Reception">
       </div>
-    </div>
-  </div>
-
-  <!-- New Section: Campus Life & Learning Experience -->
-
-
-  <!-- New Section: Our Campus Infrastructure -->
-  <section class="section infrastructure-section fade-in-scroll">
-    <div class="container">
-      <h2 class="section-title text-center">Our Campus Infrastructure</h2>
-      <p class="section-desc text-center">State-of-the-art facilities designed for modern learning.</p>
-
-      <div class="infra-gallery">
-        <!-- 1. Reception Area -->
-        <div class="infra-item fade-in-scroll">
-          <img src="reception.jpeg" alt="Modern Reception" loading="lazy">
-          <div class="infra-overlay">
-            <div class="infra-caption">Modern Reception</div>
-          </div>
-        </div>
-
-        <!-- 2. Interactive Learning Hall -->
-        <div class="infra-item fade-in-scroll">
-          <img src="seminar_hall.jpeg" alt="Interactive Learning Hall" loading="lazy">
-          <div class="infra-overlay">
-            <div class="infra-caption">Interactive Learning Hall</div>
-          </div>
-        </div>
-
-        <!-- 3. Smart Classrooms -->
-        <div class="infra-item fade-in-scroll">
-          <img src="classroom.jpeg" alt="Smart Classrooms" loading="lazy">
-          <div class="infra-overlay">
-            <div class="infra-caption">Smart Classrooms</div>
-          </div>
-        </div>
-
-        <!-- 4. Building Exterior -->
-        <div class="infra-item fade-in-scroll">
-          <img src="building_exterior.jpeg" alt="Nano World School Campus" loading="lazy">
-          <div class="infra-overlay">
-            <div class="infra-caption">Nano World School Campus</div>
-          </div>
-        </div>
-
-        <!-- 5. Interior Seating -->
-        <div class="infra-item fade-in-scroll">
-          <img src="interior_seating.jpeg" alt="Student Engagement Area" loading="lazy">
-          <div class="infra-overlay">
-            <div class="infra-caption">Student Engagement Area</div>
-          </div>
-        </div>
-
-        <!-- 6. Branding Wall / Extra -->
-        <div class="infra-item fade-in-scroll">
-          <img src="branding_wall.jpeg" alt="Nano Pride" loading="lazy">
-          <div class="infra-overlay">
-            <div class="infra-caption">Nano Pride</div>
-          </div>
+      <div class="about-text fade-up">
+        <h2 class="section-title text-left">Nurturing True Potential</h2>
+        <p class="section-subtitle text-left" style="margin-bottom:1.5rem">At Nano World School, we believe in shaping
+          the leaders of tomorrow through an integrated approach to education.</p>
+        <ul class="about-list">
+          <li>Experiential Learning Methodology</li>
+          <li>Digital & Smart Classrooms</li>
+          <li>Activity-Based Curriculum</li>
+          <li>Safe & Secure Transportation</li>
+          <li>Holistic Child Development</li>
+        </ul>
+        <div style="margin-top:2.5rem;">
+          <a href="#academic" class="btn btn-navy">Discover Academics</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Academic & Pedagogical Framework -->
+  <!-- Academic Excellence -->
   <section class="section bg-light" id="academic">
     <div class="container">
-      <h2 class="section-title text-center">Academic & Pedagogical Framework</h2>
-      <p class="section-desc text-center">Fostering deep conceptual understanding and competitive readiness through a
-        structured approach.</p>
-
-      <div class="grid-2">
-        <div class="framework-card animate-left">
-          <h3>📚 Concept-Based Teaching</h3>
-          <ul class="framework-list">
-            <li>In-depth mastery in Math, Science, English, and Social Studies.</li>
-            <li>Focus on "Why" and "How" rather than rote memorization.</li>
-            <li>Integrated exposure for JEE, NEET, SAT, CLAT, and Olympiads.</li>
-          </ul>
+      <div class="text-center fade-up">
+        <h2 class="section-title">Academic Excellence</h2>
+        <p class="section-subtitle">A comprehensive curriculum designed for competitive readiness and conceptual
+          mastery.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card-premium fade-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+            </svg>
+          </div>
+          <h3>CBSE Curriculum</h3>
+          <p>Integrated syllabus ensuring strong fundamentals in Math, Science, and Languages.</p>
         </div>
-        <div class="framework-card animate-right">
-          <h3>🧠 Skill Development</h3>
-          <ul class="framework-list">
-            <li>Coding, logical reasoning, and analytical skill modules.</li>
-            <li>Daily worksheets and structured revision cycles.</li>
-            <li>Regular testing to track scholastic progress.</li>
-          </ul>
+        <div class="card-premium fade-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18h6"></path>
+              <path d="M10 22h4"></path>
+              <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A6 6 0 1 0 7.5 11.5c.76.76 1.23 1.52 1.41 2.5"></path>
+            </svg>
+          </div>
+          <h3>Co-curricular</h3>
+          <p>Skill development modules including coding, robotics, and logical reasoning.</p>
+        </div>
+        <div class="card-premium fade-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+              <path d="M4 22h16"></path>
+              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+            </svg>
+          </div>
+          <h3>Sports & Arts</h3>
+          <p>Structured physical education, theatre, arts, and confidence building activities.</p>
+        </div>
+        <div class="card-premium fade-up">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M8 21h8"></path>
+              <path d="M12 17v4"></path>
+            </svg>
+          </div>
+          <h3>Smart Infrastructure</h3>
+          <p>AI enabled learning, digital classrooms, and continuous scholastic tracking.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. Holistic Development Model -->
-  <section class="section" id="holistic">
+  <!-- Campus Life Gallery Section -->
+  <section class="section" id="gallery">
     <div class="container">
-      <h2 class="section-title text-center">Holistic Development Model</h2>
-      <p class="section-desc text-center">Nurturing the Head, Heart, Voice, and Body for complete student success.</p>
-
-      <div class="holistic-grid-system">
-        <div class="holistic-item head hover-lift">
-          <div class="holistic-icon-large">🧠</div>
-          <h3>HEAD (Intellectual)</h3>
-          <p>Developing critical thinking, problem-solving, and academic mastery through rigorous curriculum and
-            competitive exposure.</p>
+      <div class="text-center fade-up">
+        <h2 class="section-title">Campus Life Gallery</h2>
+        <p class="section-subtitle">Experience the state-of-the-art facilities designed for modern learning.</p>
+      </div>
+      <div class="campus-gallery-grid">
+        <div class="gallery-item fade-up">
+          <img src="/building_exterior.jpeg" alt="Exterior Overview" loading="lazy">
         </div>
-        <div class="holistic-item heart hover-lift">
-          <div class="holistic-icon-large">❤️</div>
-          <h3>HEART (Emotional)</h3>
-          <p>Building empathy, emotional intelligence, and strong values. Fostering respect, discipline, and civic
-            responsibility.</p>
+        <div class="gallery-item fade-up">
+          <img src="/reception.jpeg" alt="Modern Reception" loading="lazy">
         </div>
-        <div class="holistic-item voice hover-lift">
-          <div class="holistic-icon-large">🗣️</div>
-          <h3>VOICE (Communication)</h3>
-          <p>Empowering students with "Speak-to-Lead", Nano Talks, debate sessions, and theatre to build confidence.</p>
+        <div class="gallery-item fade-up">
+          <img src="/classroom.jpeg" alt="Smart Classroom" loading="lazy">
         </div>
-        <div class="holistic-item body hover-lift">
-          <div class="holistic-icon-large">🏃</div>
-          <h3>BODY (Physical)</h3>
-          <p>Ensuring physical fitness through structured sports programs, yoga, and wellness activities for stamina and
-            health.</p>
+        <div class="gallery-item fade-up">
+          <img src="/interior_seating.jpeg" alt="Interior Seating Area" loading="lazy">
+        </div>
+        <div class="gallery-item fade-up">
+          <img src="/seminar_hall.jpeg" alt="Seminar Hall" loading="lazy">
+        </div>
+        <div class="gallery-item fade-up">
+          <img src="/branding_wall.jpeg" alt="School Branding Wall" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 8. Communication & Leadership Edge -->
-  <section class="leadership-highlight">
+  <!-- Video Showcase -->
+  <section class="section bg-navy text-center" id="facilities">
+    <div class="container fade-up">
+      <h2 class="section-title text-gold text-center" style="color:var(--color-gold);">Experience Nano World School</h2>
+      <p class="section-subtitle" style="color:var(--color-white)">Take a virtual tour of our vibrant campus and
+        engaging learning environment.</p>
+      <div class="grid-2" style="margin-top: 3rem;">
+        <div class="video-wrapper fade-up">
+          <iframe src="https://www.youtube.com/embed/P9GIYNQ9BTE" title="Campus Life" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper fade-up">
+          <iframe src="https://www.youtube.com/embed/iABxTUQKZBg" title="Learning Experience" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section bg-light" id="features">
     <div class="container">
-      <div class="leadership-content animate-right">
-        <h2 style="color: var(--color-primary);">Communication & Leadership Edge</h2>
-        <p style="color: var(--color-text);">We don't just teach students; we create leaders who can articulate their
-          vision.</p>
-        <ul class="framework-list">
-          <li><strong>Nano Talks & Debates:</strong> Platforms to express ideas fearlessly.</li>
-          <li><strong>Leadership Mentoring:</strong> Student councils and community projects.</li>
-          <li><strong>Storytelling & Theatre:</strong> Enhancing creative expression.</li>
-          <li><strong>Presentation Skills:</strong> Mastering the art of public speaking.</li>
-        </ul>
+      <div class="text-center fade-up">
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-subtitle">We don't just teach students; we create leaders who can articulate their vision.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- 9. Faculty Excellence -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="section-title text-center">Faculty Excellence</h2>
-      <p class="section-desc text-center">Our educators are mentors, guides, and lifelong learners.</p>
-
-      <div class="faculty-row">
-        <div class="faculty-badge hover-lift">
-          <div class="faculty-icon-circle">🎓</div>
-          <div>
-            <h4>Eminent Alumni Faculty</h4>
-            <p>Guided by top-tier educators.</p>
+      <div class="grid-3" style="max-width: 1000px; margin: 0 auto;">
+        <div class="card-premium fade-up text-center">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
           </div>
+          <h3>Experienced Faculty</h3>
+          <p>Eminent educators and subject matter experts providing personalized mentoring.</p>
         </div>
-        <div class="faculty-badge hover-lift">
-          <div class="faculty-icon-circle">📘</div>
-          <div>
-            <h4>Subject Mastery</h4>
-            <p>Specialized teachers for every subject.</p>
+        <div class="card-premium fade-up text-center">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
           </div>
+          <h3>Child-Centric Approach</h3>
+          <p>Fostering emotional intelligence, empathy, and strong values in every child.</p>
         </div>
-        <div class="faculty-badge hover-lift">
-          <div class="faculty-icon-circle">🌱</div>
-          <div>
-            <h4>Personalized Mentoring</h4>
-            <p>1-on-1 guidance for every student.</p>
+        <div class="card-premium fade-up text-center">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
           </div>
+          <h3>Secure Campus</h3>
+          <p>24/7 monitored environment ensuring highest safety standards for students.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. Technology Enabled Learning -->
-  <section class="section bg-premium-gradient">
-    <div class="container">
-      <h2 class="section-title text-center">Technology-Enabled Learning</h2>
-      <p class="section-desc text-center" style="color: rgba(255,255,255,0.8);">Future-ready infrastructure for modern
-        education.</p>
-
-      <div class="tech-grid">
-        <div class="tech-card">
-          <div class="tech-icon">📊</div>
-          <h3>AI Monitoring</h3>
-          <p style="color: rgba(255,255,255,0.7);">Real-time scholastic analytics.</p>
-        </div>
-        <div class="tech-card">
-          <div class="tech-icon">🖥️</div>
-          <h3>Smart Classrooms</h3>
-          <p style="color: rgba(255,255,255,0.7);">Interactive digital learning tools.</p>
-        </div>
-        <div class="tech-card">
-          <div class="tech-icon">📝</div>
-          <h3>Online Testing</h3>
-          <p style="color: rgba(255,255,255,0.7);">CBT practice for competitive exams.</p>
-        </div>
-        <div class="tech-card">
-          <div class="tech-icon">📱</div>
-          <h3>MyClassroom App</h3>
-          <p style="color: rgba(255,255,255,0.7);">Seamless learning support at home.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11. Courses Offered -->
-  <section class="section bg-light" id="courses">
-    <div class="container">
-      <h2 class="section-title text-center">Courses Offered</h2>
-      <div class="courses-grid">
-        <div class="course-card hover-lift">
-          <div class="course-header">
-            <h3>iNano Program</h3>
-            <span class="course-tag">Classes VI - X</span>
+        <div class="card-premium fade-up text-center">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
           </div>
-          <div class="course-body">
-            <ul class="course-list">
-              <li>Integrated syllabus covering State/CBSE.</li>
-              <li>Strong foundation for IIT-JEE & NEET.</li>
-              <li>Focus on logic and analytical skills.</li>
-            </ul>
-          </div>
+          <h3>Parent Communication</h3>
+          <p>Seamless learning support app linking school progress to home effectively.</p>
         </div>
-        <div class="course-card hover-lift">
-          <div class="course-header">
-            <h3>Foundation Program</h3>
-            <span class="course-tag">Competitive Focus</span>
+        <div class="card-premium fade-up text-center">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="3" width="16" height="16" rx="2" ry="2"></rect>
+              <path d="M4 11h16"></path>
+              <circle cx="8" cy="15" r="1.5"></circle>
+              <circle cx="16" cy="15" r="1.5"></circle>
+              <path d="M6 19v2"></path>
+              <path d="M18 19v2"></path>
+            </svg>
           </div>
-          <div class="course-body">
-            <ul class="course-list">
-              <li>Olympiad preparation (Maths/Science).</li>
-              <li>NTSE & Scholarship exam readiness.</li>
-              <li>Advanced problem-solving modules.</li>
-            </ul>
-          </div>
+          <h3>Safe Transportation</h3>
+          <p>A well-maintained fleet ensuring safe and punctual transit across the city.</p>
         </div>
-        <div class="course-card hover-lift">
-          <div class="course-header">
-            <h3>Future Skills</h3>
-            <span class="course-tag">Beyond Academics</span>
+        <div class="card-premium fade-up text-center">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="42" height="42" stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+            </svg>
           </div>
-          <div class="course-body">
-            <ul class="course-list">
-              <li>Coding & Robotics basics.</li>
-              <li>Communication & Leadership certification.</li>
-              <li>Financial literacy workshops.</li>
-            </ul>
-          </div>
+          <h3>Speak-to-Lead</h3>
+          <p>Empowering students with public speaking, debate, and theatre skills.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12. Values & Wellness -->
-  <section class="section values-container">
-    <div class="container text-center">
-      <h2 class="section-title">Values & Wellness Framework</h2>
-      <p class="section-desc">Rooted in tradition, aiming for the future.</p>
-
-      <div class="values-grid">
-        <div class="value-circle">
-          <div class="value-icon">🙏</div>
-          <h4>Respect & Discipline</h4>
-        </div>
-        <div class="value-circle">
-          <div class="value-icon">🏡</div>
-          <h4>Family Values</h4>
-        </div>
-        <div class="value-circle">
-          <div class="value-icon">🤝</div>
-          <h4>Civic Responsibility</h4>
-        </div>
-        <div class="value-circle">
-          <div class="value-icon">✨</div>
-          <h4>Character Education</h4>
-        </div>
-      </div>
+  <!-- Call To Action -->
+  <section class="cta-banner" id="admissions">
+    <div class="container fade-up">
+      <h2 class="cta-title">Admissions Open 2026–27</h2>
+      <p style="font-size:1.2rem; margin-bottom:2rem; position:relative; z-index:2;">Secure a bright future for your
+        child at Nano World School.</p>
+      <a href="contact.html" class="btn btn-primary" style="position:relative; z-index:2;">Enquire Now</a>
     </div>
   </section>
 
-  <!-- 13. Outcome Promise & Achievements Banner -->
-  <section class="section bg-premium-gradient" style="padding: 4rem 0;">
-    <div class="container">
-      <h2 class="section-title text-center">Our Outcome Promise</h2>
-      <div class="outcome-list">
-        <div class="outcome-item">
-          <div class="outcome-icon">✔️</div>
-          <div class="outcome-text">
-            <h4>Concept Clarity</h4>
-            <p>Deep understanding of core subjects.</p>
-          </div>
-        </div>
-        <div class="outcome-item">
-          <div class="outcome-icon">✔️</div>
-          <div class="outcome-text">
-            <h4>Competitive Readiness</h4>
-            <p>Prepared for national level exams.</p>
-          </div>
-        </div>
-        <div class="outcome-item">
-          <div class="outcome-icon">✔️</div>
-          <div class="outcome-text">
-            <h4>Communication Confidence</h4>
-            <p>Ability to speak up and lead.</p>
-          </div>
-        </div>
-        <div class="outcome-item">
-          <div class="outcome-icon">✔️</div>
-          <div class="outcome-text">
-            <h4>Life Skills</h4>
-            <p>Resilience, empathy, and teamwork.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Achievements Counters -->
-      <div class="grid-4 counter-grid"
-        style="margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
-        <div class="counter-item">
-          <h3 class="counter" data-target="1500">0</h3>
-          <p>Happy Students</p>
-        </div>
-        <div class="counter-item">
-          <h3 class="counter" data-target="80">0</h3>
-          <p>Expert Faculty</p>
-        </div>
-        <div class="counter-item">
-          <h3 class="counter" data-target="100">0</h3><span>%</span>
-          <p>Results</p>
-        </div>
-        <div class="counter-item">
-          <h3 class="counter" data-target="50">0</h3><span>+</span>
-          <p>Awards Won</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 14. Campus Life Gallery Section -->
-  <section class="section campus-gallery" id="gallery">
-    <div class="container">
-      <h2 class="section-title text-center">Life @ Nano</h2>
-      <div class="gallery-scroll-container">
-        <!-- YouTube Video 1 -->
-        <div class="gallery-item">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/P9GIYNQ9BTE"
-            title="Nano World School - Campus Life" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen style="display:block;"></iframe>
-        </div>
-
-        <!-- Image 1 -->
-        <div class="gallery-item"><img
-            src="https://images.unsplash.com/photo-1561089489-f13d5e730d72?q=80&w=2000&auto=format&fit=crop"
-            alt="Sports Facilities" loading="lazy"></div>
-
-        <!-- YouTube Video 2 -->
-        <div class="gallery-item">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iABxTUQKZBg"
-            title="Nano World School - Learning Experience" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen style="display:block;"></iframe>
-        </div>
-
-        <!-- Image 2 -->
-        <div class="gallery-item"><img
-            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2000&auto=format&fit=crop"
-            alt="Science Labs" loading="lazy"></div>
-
-        <!-- Image 3 -->
-        <div class="gallery-item"><img
-            src="https://images.unsplash.com/photo-1525921429624-479b6a26d84d?q=80&w=2000&auto=format&fit=crop"
-            alt="Campus Infrastructure" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 15. Testimonials Slider -->
-  <section class="section testimonials bg-light">
-    <div class="container">
-      <h2 class="section-title text-center">Why Parents Trust Nano</h2>
-      <div class="testimonial-slider-container">
-        <div class="testimonial-card premium-p-card">
-          <p>"The 'Speak-to-Lead' program is amazing. My son used to be shy, but now he participates in debates
-            confidently. Academic growth is also visible."</p>
-          <div class="testi-author">
-            <div class="author-avatar">P</div>
-            <h4>Parent of Grade 6 Student</h4>
-          </div>
-        </div>
-        <div class="testimonial-card premium-p-card">
-          <p>"A perfect balance of studies and sports. The faculty is very approachable and the digital classrooms make
-            learning interesting."</p>
-          <div class="testi-author">
-            <div class="author-avatar">P</div>
-            <h4>Parent of Grade 8 Student</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 16. Brochure Section -->
-  <section class="section brochure" id="brochure">
-    <div class="container text-center">
+  <!-- Brochure Section -->
+  <section class="section" id="brochure">
+    <div class="container text-center fade-up">
       <h2 class="section-title">Download Official Brochure</h2>
-      <p class="section-desc">Get the complete details about our curriculum, fee structure, and admission process.</p>
-      <div class="brochure-buttons">
+      <p class="section-subtitle">Get complete details about our curriculum and admission process.</p>
+      <div style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap;">
         <a href="https://drive.google.com/file/d/1hpHQq87KSVKVGKq6CqRroR9KxGl35I5_/view?usp=sharing" target="_blank"
-          class="btn btn-primary icon-btn">
-          📄 Download Academic Brochure
-        </a>
+          class="btn btn-navy">📄 Download Academic Brochure</a>
         <a href="https://drive.google.com/file/d/18FGwP8A1g6B09EGLwWwn9Hrgfh2GMpcg/view?usp=sharing" target="_blank"
-          class="btn btn-secondary icon-btn-dark">
-          📘 Download Prospectus
-        </a>
+          class="btn btn-outline" style="border-color:var(--color-navy); color:var(--color-navy);">📘 Download
+          Prospectus</a>
       </div>
     </div>
   </section>
 
-  <!-- 17. Enquiry Section with Excel Integration Logic -->
-  <section class="section enquiry-section" id="enquiry">
-    <div class="enquiry-bg"></div>
-    <div class="container">
-      <div class="enquiry-card glass-effect centered-card">
-        <h2 class="section-title text-center">Enquire Now</h2>
-        <p class="text-center mb-2">Kickstart your child's journey to excellence.</p>
-
-        <!-- Form for Google Sheet Integration -->
-        <form id="enquiryForm" class="enquiry-form">
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Parent's Name" required>
-          </div>
-          <div class="form-group">
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-          </div>
-          <div class="form-group">
-            <select name="class" required>
-              <option value="" disabled selected>Select Class Interested</option>
-              <option value="Pre-Primary">Pre-Primary</option>
-              <option value="Primary (1-5)">Primary (I - V)</option>
-              <option value="Middle (6-8)">Middle (VI - VIII)</option>
-              <option value="High (9-10)">High School (IX - X)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <textarea name="message" placeholder="Message or Query" rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary full-width">Submit Enquiry</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- 18. Footer Upgrade -->
-  <!-- 18. Footer Upgrade -->
-  <footer class="footer premium-footer">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Brand Column -->
-        <div class="footer-col brand-col">
+        <div class="footer-brand fade-up">
           <h3>Nano World School</h3>
-          <p class="footer-tagline">Think Deep. Speak Bold.</p>
-          <div class="social-links-footer">
-            <a href="https://www.instagram.com/nanoworldschool2026/" target="_blank" class="social-icon-btn"
-              aria-label="Instagram">📷</a>
-            <a href="https://www.facebook.com/profile.php?id=61588334097578" target="_blank" class="social-icon-btn"
-              aria-label="Facebook">Mk</a>
-            <a href="https://www.youtube.com/@nanoworldschool" target="_blank" class="social-icon-btn"
-              aria-label="YouTube">▶️</a>
-            <a href="https://www.linkedin.com/company/nanoworldschool/about/?viewAsMember=true" target="_blank"
-              class="social-icon-btn" aria-label="LinkedIn">in</a>
-            <a href="https://x.com/nanoworldschool" target="_blank" class="social-icon-btn" aria-label="Twitter">X</a>
+          <p>Think Deep. Speak Bold.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/nanoworldschool2026/" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <defs>
+                  <linearGradient id="ig-grad1" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#fd5949" />
+                    <stop offset="50%" stop-color="#d6249f" />
+                    <stop offset="100%" stop-color="#285AEB" />
+                  </linearGradient>
+                </defs>
+                <path fill="url(#ig-grad1)"
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61588334097578" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="#1877F2" width="24" height="24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@nanoworldschool" class="social-icon" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="#FF0000" width="24" height="24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.872.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://x.com/nanoworldschool" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="#000000" width="24" height="24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/nanoworldschool/about/?viewAsMember=true" class="social-icon"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="#0A66C2" width="24" height="24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
           </div>
         </div>
-
-        <!-- Quick Links -->
-        <div class="footer-col links-col">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
+        <div class="fade-up">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About School</a></li>
             <li><a href="#academic">Academics</a></li>
-            <li><a href="#holistic">Holistic Development</a></li>
             <li><a href="#gallery">Campus Life</a></li>
-            <li><a href="#enquiry">Admissions</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
-
-        <!-- Contact Info -->
-        <div class="footer-col contact-col">
-          <h3>Contact Us</h3>
-          <p>Huda Layout Nallagandla,<br>Opposite Kidzee Preschool,<br>Serilingampalle (M), Hyderabad, Telangana 500019
-          </p>
-          <p class="phone-large" style="margin-top:1rem; font-size:1.25rem;">📞 9704840888</p>
-          <div style="margin-top: 1.5rem;">
-            <a href="#brochure" class="btn btn-outline small"
-              style="border-color:rgba(255,255,255,0.3); color:white;">Download Brochure</a>
-          </div>
+        <div class="fade-up">
+          <h4 class="footer-heading">Admissions</h4>
+          <ul class="footer-links">
+            <li><a href="#admissions">Apply Now</a></li>
+            <li><a href="#brochure">Download Brochure</a></li>
+            <li><a href="#features">Why Choose Us</a></li>
+          </ul>
+        </div>
+        <div class="fade-up">
+          <h4 class="footer-heading">Contact Info</h4>
+          <p style="margin-bottom:1rem;">Huda Layout Nallagandla,<br>Opposite Kidzee Preschool,<br>Serilingampalle (M),
+            Hyderabad,<br>Telangana 500019</p>
+          <p style="color:var(--color-gold); font-size:1.2rem; font-weight:600;">9704840888</p>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Nano World School. All rights reserved. | <a href="#">Privacy Policy</a></p>
+      <div class="footer-bottom fade-up">
+        <p>&copy; 2026 Nano World School. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Floating Enquiry Button -->
-  <a href="#enquiry" class="floating-btn">Enquire Now</a>
-
-  <!-- Back To Top -->
-  <div id="backToTop" class="back-to-top">↑</div>
-
-  <script type="module" src="/src/main.js"></script>
+  <script src="/src/main.js" type="module"></script>
 </body>
 
 </html>
